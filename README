@@ -4,7 +4,7 @@ streamkl is available under two different licenses. LGPL or the BSD license.
 0.1.0 IS EXPERIMENTAL
 
 The 0.1.0 version of streamkl provides elementary streaming capabilities for 
-kafka 0.7.0 to .... It requires erlkafka 0.6.0 or later 
+kafka 0.7.0 to .... It requires erlkafka 0.6.1 or later 
 (github.com:milindparikh/erlkafka)
 
 0.1.0 
