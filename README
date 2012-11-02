@@ -1,0 +1,45 @@
+streamkl is the library for streaming events from kafka.
+streamkl is available under two different licenses. LGPL or the BSD license.
+
+0.1.0 IS EXPERIMENTAL
+
+The 0.1.0 version of streamkl provides elementary streaming capabilities for 
+kafka 0.7.0 to .... It requires erlkafka 0.6.0 or later 
+(github.com:milindparikh/erlkafka)
+
+0.1.0 
+     Streams events as they happen on kafka broker to browser. 
+     
+     Usage: 
+       application:start(erlkafka_app).
+       streamklw3_server:start_link(9990).   % 9990 is the port
+
+
+     Point your browser to http://127.0.0.1:9990/<topic>/style/<broker>/<partition>/offset
+     
+     http://127.0.0.1:9990/testtopic/default/0/0/0
+
+     * 0.1.0 is experimental
+     * The style does not do anything currently
+     * You do need to know your offsets
+
+      
+     As you begin to pump events into the broker
+         kafka_simple_api:produce(0, <<"testtopic">>, 0, [<<"Hello">>, <<"World">>]).
+     You get to see events in the browser.
+
+     If you don't push events and the streamer catches up, after a while
+     it will stop the stream
+
+
+
+
+
+
+
+
+         
+
+
+
+
